@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Happy Birthday, my love — this whole page is yours." />
+  <meta name="theme-color" content="#030008" />
+  <title>Happy Birthday, My Love ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/effects.css" />
+
+  <style>
+    html { background: #030008; }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <canvas id="galaxy-canvas" aria-hidden="true"></canvas>
+  <canvas id="three-canvas" aria-hidden="true"></canvas>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- PRELOADER -->
+  <div id="preloader" role="progressbar" aria-label="Loading experience">
+    <div class="preloader__bg"></div>
+    <div class="preloader__rings">
+      <div class="preloader__ring-outer"></div>
+      <div class="preloader__ring-mid"></div>
+    </div>
+    <div class="preloader__content">
+      <span class="preloader__heart">♡</span>
+      <div class="preloader__ring" aria-hidden="true"></div>
+      <p class="preloader__quote"></p>
+      <div>
+        <div class="preloader__bar">
+          <div class="preloader__bar-fill"></div>
+        </div>
+        <span class="preloader__percent">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#hero" class="nav__logo">My Love.</a>
+    <ul class="nav__links" role="list">
+      <li><a href="#timeline" class="hover-line">Our Story</a></li>
+      <li><a href="#gallery" class="hover-line">Gallery</a></li>
+      <li><a href="#love-letter" class="hover-line">Letter</a></li>
+      <li><a href="#finale" class="hover-line">Forever</a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav-dots" aria-label="Section navigation"></nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" data-scene="hero">
+      <div class="hero__particles" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__badge">
+          <span>Happy Birthday, my love ♡ Today is all about you.</span>
+        </div>
+
+        <h1 class="hero__headline t-hero glow-text">
+          <span class="line">You are the reason</span>
+          <span class="line">I believe in <em>forever.</em></span>
+        </h1>
+
+        <p class="hero__sub">
+          Before you, I never understood what it meant to feel truly found.
+          Then you happened — and everything quiet in me finally had a name.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#timeline" class="btn btn-primary" data-magnetic>
+            Our Story ♡
+          </a>
+          <a href="#love-letter" class="btn btn-ghost" data-magnetic>
+            Read Your Letter
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="hero__scroll-arrow"></div>
+      </div>
+
+      <div class="orb-decoration orb-violet" style="width:600px;height:600px;top:-20%;right:-15%;opacity:0.5;"></div>
+      <div class="orb-decoration orb-pink" style="width:400px;height:400px;bottom:-10%;left:-8%;opacity:0.4;"></div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline" id="timeline" data-scene="timeline">
+      <div class="section-number" aria-hidden="true">01</div>
+      <div class="container">
+        <header class="section-header">
+          <p class="t-label section-header__eyebrow" data-reveal="fade-up">
+            The moment everything changed
+          </p>
+          <div class="section-divider"></div>
+          <h2 class="t-section-title section-header__title" data-reveal="fade-up">
+            Our Story<br /><em style="font-style:italic;color:var(--clr-pink-soft);">So Far</em>
+          </h2>
+          <p class="section-header__desc t-body" data-reveal="fade-up">
+            I used to think love stories had a clear starting line.
+            Ours didn't. It began somewhere between a glance and a conversation —
+            and before I could explain it, you had already become my favorite thing about being alive.
+          </p>
+        </header>
+
+        <div class="timeline__inner">
+          <div class="timeline__glow-line" aria-hidden="true"></div>
+          <div class="timeline__items"></div>
+        </div>
+      </div>
+
+      <div class="orb-decoration orb-blue" style="width:500px;height:500px;top:30%;left:-10%;opacity:0.3;"></div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery" data-scene="gallery">
+      <div class="section-number" aria-hidden="true">02</div>
+      <div class="container">
+        <header class="section-header">
+          <p class="t-label section-header__eyebrow" data-reveal="fade-up">
+            Every version of you — breathtaking
+          </p>
+          <div class="section-divider"></div>
+          <h2 class="t-section-title section-header__title" data-reveal="fade-up">
+            Every frame<br /><em style="font-style:italic;color:var(--clr-violet-soft);">is yours</em>
+          </h2>
+          <p class="section-header__desc t-body" data-reveal="fade-up">
+            I've kept every single one. The soft ones. The unguarded ones.
+            The ones where you had no idea how completely I had already fallen for you.
+          </p>
+        </header>
+
+        <div class="gallery__grid" role="list">
+
+          <div class="gallery__card" data-reveal="fade-up">
+            <div class="gallery__card-inner">
+              <img class="gallery__photo" src="assets/images/img1.jpeg" alt="photo 1" loading="lazy" />
+              <div class="gallery__caption">
+                <span class="gallery__caption-text">You light up every room without even trying — that effortless kind of beautiful that I will never stop noticing.</span>
+                <span class="gallery__caption-tag">#effortless</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__card" data-reveal="fade-up">
+            <div class="gallery__card-inner">
+              <img class="gallery__photo" src="assets/images/img2.jpeg" alt="photo 2" loading="lazy" />
+              <div class="gallery__caption">
+                <span class="gallery__caption-text">The way you look at the world — softly, curiously — makes me want to see everything through your eyes.</span>
+                <span class="gallery__caption-tag">#mine</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__card" data-reveal="fade-up">
+            <div class="gallery__card-inner">
+              <img class="gallery__photo" src="assets/images/img3.jpeg" alt="photo 3" loading="lazy" />
+              <div class="gallery__caption">
+                <span class="gallery__caption-text">Your laugh — I would cross any distance, in any lifetime, just to hear it one more time.</span>
+                <span class="gallery__caption-tag">#everything</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__card" data-reveal="fade-up">
+            <div class="gallery__card-inner">
+              <img class="gallery__photo" src="assets/images/img4.jpeg" alt="photo 4" loading="lazy" />
+              <div class="gallery__caption">
+                <span class="gallery__caption-text">I've memorized the way you smile when you think nobody's watching. I'm always watching.</span>
+                <span class="gallery__caption-tag">#infinite</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__card" data-reveal="fade-up">
+            <div class="gallery__card-inner">
+              <img class="gallery__photo" src="assets/images/img5.jpeg" alt="photo 5" loading="lazy" />
+              <div class="gallery__caption">
+                <span class="gallery__caption-text">Golden hour finds you — but you've always been the warmest light in any room I've ever been in with you.</span>
+                <span class="gallery__caption-tag">#luminous</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__card" data-reveal="fade-up">
+            <div class="gallery__card-inner">
+              <img class="gallery__photo" src="assets/images/img6.jpeg" alt="photo 6" loading="lazy" />
+              <div class="gallery__caption">
+                <span class="gallery__caption-text">You are the thing I would choose — every single day, without hesitation, without condition.</span>
+                <span class="gallery__caption-tag">#always</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:clamp(40px,6vw,72px);">
+          <p class="t-quote" data-reveal="scale" style="max-width:600px;margin:0 auto;color:var(--clr-white-40);">
+            "Not just a photograph. Proof that this — us — is the most beautiful thing I've ever been part of."
+          </p>
+        </div>
+      </div>
+
+      <div class="orb-decoration orb-pink" style="width:600px;height:600px;bottom:-10%;right:-10%;opacity:0.35;"></div>
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section class="love-letter" id="love-letter" data-scene="love-letter">
+      <div class="section-number" aria-hidden="true">03</div>
+      <div class="letter__spotlight" aria-hidden="true"></div>
+
+      <div class="love-letter__inner">
+        <header class="section-header">
+          <p class="t-label section-header__eyebrow" data-reveal="fade-up">
+            Written from the truest part of me
+          </p>
+          <div class="section-divider"></div>
+          <h2 class="t-section-title section-header__title" data-reveal="fade-up">
+            What I want you<br /><em style="font-style:italic;color:var(--clr-pink-soft);">to know today</em>
+          </h2>
+        </header>
+
+        <div class="love-letter__paper glass-card">
+          <span class="letter__salutation">To you, on your birthday —</span>
+
+          <div class="letter__body">
+            <p>
+              Selamat ulang tahun Devina Anggreani, hari ini tanggal 06.0.6.2024 kamu ulang tahun ya,
+            </p>
+
+            <p>
+              selamat ya kamu dirayakan hehee, maafin aku ya aku belum bisa apa yang kamu inginkan, maaf banget aku bukan cowo yang sempura
+            </p>
+
+            <p>
+              semoga panjang umur, banyak rezekinya, saka wistlistnya tercapay ya sayang, lv uuu sayangg, and lv u moreee sayang cinta, and one more kita harus ttp perjuangin hubungan ini ya sayang aku pengannya kamu telakhir buat aku🫶🏻❤️
+            </p>
+
+        
+          </div>
+
+          <span class="letter__sign">— yours, in every universe. ♡</span>
+        </div>
+      </div>
+
+      <div class="orb-decoration orb-violet" style="width:700px;height:700px;top:-20%;left:-15%;opacity:0.25;"></div>
+    </section>
+
+    <!-- FINALE -->
+    <section class="finale" id="finale" data-scene="finale">
+      <div class="finale__bg-glow" aria-hidden="true"></div>
+
+      <div class="finale__inner">
+        <span class="finale__heart" aria-hidden="true">♡</span>
+        <h2 class="finale__quote t-hero glow-text">
+          In every life,<br />I would find<br /><em>my way to you.</em>
+        </h2>
+        <p class="finale__sub t-label" style="margin-top:40px;">
+          Happy Birthday, my love. Here's to forever. ♡
+        </p>
+
+        <div style="margin-top:60px;">
+          <a href="#hero" class="btn btn-primary pulse-glow" data-magnetic>
+            Read Again ♡
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>made with every piece of my heart &nbsp;·&nbsp; just for you ♡</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <script src="js/core/config.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/core/app-controller.js"></script>
+  <script src="js/systems/performance.js"></script>
+  <script src="js/systems/galaxy-background.js"></script>
+  <script src="js/systems/three-background.js"></script>
+  <script src="js/systems/preloader.js"></script>
+  <script src="js/systems/audio-system.js"></script>
+  <script src="js/engine/animation-engine.js"></script>
+  <script src="js/engine/scene-manager.js"></script>
+  <script src="js/engine/interaction-engine.js"></script>
+  <script src="js/main/script.js"></script>
+
+</body>
+</html>
